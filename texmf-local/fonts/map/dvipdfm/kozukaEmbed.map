@@ -1,0 +1,57 @@
+rml           UniJIS-UTF16-H                  KozMinPr6N-Regular.otf
+rmlv          UniJIS-UTF16-V                  KozMinPr6N-Regular.otf
+rml           Identity-H                      KozMinPr6N-Regular.otf
+rmlv          Identity-V                      KozMinPr6N-Regular.otf
+rml           H                               KozMinPr6N-Regular.otf
+rmlv          V                               KozMinPr6N-Regular.otf
+unijmin-h     UniJIS-UTF16-H                  KozMinPr6N-Regular.otf
+unijmin-v     UniJIS-UTF16-V                  KozMinPr6N-Regular.otf
+cidmin-h      Identity-H                      KozMinPr6N-Regular.otf
+cidmin-v      Identity-V                      KozMinPr6N-Regular.otf
+
+gbm           UniJIS-UTF16-H                  KozGoPr6N-Medium.otf
+gbmv          UniJIS-UTF16-V                  KozGoPr6N-Medium.otf
+gbm           Identity-H                      KozGoPr6N-Medium.otf
+gbmv          Identity-V                      KozGoPr6N-Medium.otf
+gbm           H                               KozGoPr6N-Medium.otf
+gbmv          V                               KozGoPr6N-Medium.otf
+unijgoth-h    UniJIS-UTF16-H                  KozGoPr6N-Medium.otf
+unijgoth-v    UniJIS-UTF16-V                  KozGoPr6N-Medium.otf
+cidgoth-h     Identity-H                      KozGoPr6N-Medium.otf
+cidgoth-v     Identity-V                      KozGoPr6N-Medium.otf
+
+otf-ujmr-h    UniJIS-UTF16-H                  KozMinPr6N-Regular.otf
+otf-ujmr-v    UniJIS-UTF16-V                  KozMinPr6N-Regular.otf
+otf-cjmr-h    Identity-H                      KozMinPr6N-Regular.otf
+otf-cjmr-v    Identity-V                      KozMinPr6N-Regular.otf
+hminr-h       H                               KozMinPr6N-Regular.otf
+hminr-v       V                               KozMinPr6N-Regular.otf
+
+otf-ujgr-h    UniJIS-UTF16-H                  KozGoPr6N-Medium.otf
+otf-ujgr-v    UniJIS-UTF16-V                  KozGoPr6N-Medium.otf
+otf-cjgr-h    Identity-H                      KozGoPr6N-Medium.otf
+otf-cjgr-v    Identity-V                      KozGoPr6N-Medium.otf
+hgothr-h      H                               KozGoPr6N-Medium.otf
+hgothr-v      V                               KozGoPr6N-Medium.otf
+
+otf-ujmb-h    UniJIS-UTF16-H                  KozMinPr6N-Regular.otf
+otf-ujmb-v    UniJIS-UTF16-V                  KozMinPr6N-Regular.otf
+otf-cjmb-h    Identity-H                      KozMinPr6N-Regular.otf
+otf-cjmb-v    Identity-V                      KozMinPr6N-Regular.otf
+hminb-h       H                               KozMinPr6N-Regular.otf
+hminb-v       V                               KozMinPr6N-Regular.otf
+
+otf-cjgb-h    Identity-H                      KozGoPr6N-Medium.otf
+otf-cjgb-v    Identity-V                      KozGoPr6N-Medium.otf
+otf-ujgb-h    UniJIS-UTF16-H                  KozGoPr6N-Medium.otf
+otf-ujgb-v    UniJIS-UTF16-V                  KozGoPr6N-Medium.otf
+hgothb-h      H                               KozGoPr6N-Medium.otf
+hgothb-v      V                               KozGoPr6N-Medium.otf
+
+otf-ujmgr-h   UniJIS-UTF16-H                  KozGoPr6N-Medium.otf
+otf-ujmgr-v   UniJIS-UTF16-V                  KozGoPr6N-Medium.otf
+otf-cjmgr-h   Identity-H                      KozGoPr6N-Medium.otf
+otf-cjmgr-v   Identity-V                      KozGoPr6N-Medium.otf
+hmgothr-h     H                               KozGoPr6N-Medium.otf
+hmgothr-v     V                               KozGoPr6N-Medium.otf
+

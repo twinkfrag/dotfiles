@@ -1,0 +1,57 @@
+rml           UniJIS-UTF16-H                  yumin.ttf
+rmlv          UniJIS-UTF16-V                  yumin.ttf
+rml           Identity-H                      yumin.ttf
+rmlv          Identity-V                      yumin.ttf
+rml           H                               yumin.ttf
+rmlv          V                               yumin.ttf
+unijmin-h     UniJIS-UTF16-H                  yumin.ttf
+unijmin-v     UniJIS-UTF16-V                  yumin.ttf
+cidmin-h      Identity-H                      yumin.ttf
+cidmin-v      Identity-V                      yumin.ttf
+
+gbm           UniJIS-UTF16-H                  yugothic.ttf
+gbmv          UniJIS-UTF16-V                  yugothic.ttf
+gbm           Identity-H                      yugothic.ttf
+gbmv          Identity-V                      yugothic.ttf
+gbm           H                               yugothic.ttf
+gbmv          V                               yugothic.ttf
+unijgoth-h    UniJIS-UTF16-H                  yugothic.ttf
+unijgoth-v    UniJIS-UTF16-V                  yugothic.ttf
+cidgoth-h     Identity-H                      yugothic.ttf
+cidgoth-v     Identity-V                      yugothic.ttf
+
+otf-ujmr-h    UniJIS-UTF16-H                  yumin.ttf
+otf-ujmr-v    UniJIS-UTF16-V                  yumin.ttf
+otf-cjmr-h    Identity-H                      yumin.ttf
+otf-cjmr-v    Identity-V                      yumin.ttf
+hminr-h       H                               yumin.ttf
+hminr-v       V                               yumin.ttf
+
+otf-ujgr-h    UniJIS-UTF16-H                  yugothic.ttf
+otf-ujgr-v    UniJIS-UTF16-V                  yugothic.ttf
+otf-cjgr-h    Identity-H                      yugothic.ttf
+otf-cjgr-v    Identity-V                      yugothic.ttf
+hgothr-h      H                               yugothic.ttf
+hgothr-v      V                               yugothic.ttf
+
+otf-ujmb-h    UniJIS-UTF16-H                  yumin.ttf
+otf-ujmb-v    UniJIS-UTF16-V                  yumin.ttf
+otf-cjmb-h    Identity-H                      yumin.ttf
+otf-cjmb-v    Identity-V                      yumin.ttf
+hminb-h       H                               yumin.ttf
+hminb-v       V                               yumin.ttf
+
+otf-cjgb-h    Identity-H                      yugothic.ttf
+otf-cjgb-v    Identity-V                      yugothic.ttf
+otf-ujgb-h    UniJIS-UTF16-H                  yugothic.ttf
+otf-ujgb-v    UniJIS-UTF16-V                  yugothic.ttf
+hgothb-h      H                               yugothic.ttf
+hgothb-v      V                               yugothic.ttf
+
+otf-ujmgr-h   UniJIS-UTF16-H                  yugothic.ttf
+otf-ujmgr-v   UniJIS-UTF16-V                  yugothic.ttf
+otf-cjmgr-h   Identity-H                      yugothic.ttf
+otf-cjmgr-v   Identity-V                      yugothic.ttf
+hmgothr-h     H                               yugothic.ttf
+hmgothr-v     V                               yugothic.ttf
+
