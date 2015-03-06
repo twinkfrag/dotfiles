@@ -1,8 +1,8 @@
 "set nobackup
 "set noundofile
-set directory=/temp/vim
-set undodir=/temp/vim
-set backupdir=/temp/vim
+set directory=%LocalAppData%/temp/vim
+set undodir=%LocalAppData%/temp/vim
+set backupdir=%LocalAppData%/temp/vim
 set nf="" "おれは、8進数をやめるぞー！
 set fileencoding=utf-8
 set fileformat=dos
