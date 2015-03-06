@@ -1,0 +1,8 @@
+[user]
+	email = mail@twinkfrag.net
+	name = あると
+[core]
+	excludesfile = $HOME/.gitignore
+[alias]
+    tree = log --graph --pretty='format:%C(yellow)%h%Creset %s %Cgreen(%an)%Creset %Cred%d%Creset'
+
