@@ -7,6 +7,7 @@ mklink %userprofile%\_vimrc %~dp0.vimrc
 mklink %userprofile%\_gvimrc %~dp0.gvimrc
 mklink %userprofile%\.gitignore %~dp0.gitignore
 mklink %userprofile%\.gitconfig %~dp0.gitconfig
+mklink %userprofile%\.vsvimrc %~dp0.vsvimrc
 pause
 goto End
  
