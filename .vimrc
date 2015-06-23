@@ -1,8 +1,12 @@
 "set nobackup
 "set noundofile
-set directory=%LocalAppData%/temp/vim
-set undodir=%LocalAppData%/temp/vim
-set backupdir=%LocalAppData%/temp/vim
+
+if has('windows')
+	set directory=%LocalAppData%/vim
+	set undodir=%LocalAppData%/vim
+	set backupdir=%LocalAppData%/vim
+endif
+
 set nf="" "おれは、8進数をやめるぞー！
 set fileencoding=utf-8
 set fileformat=dos
@@ -32,6 +36,7 @@ if has('vim_starting')
 	NeoBundle 'w0ng/vim-hybrid'
 
 	NeoBundle 'taku25/vim-visualstudio'
+	NeoBundle 'sophacles/vim-processing'
 	call neobundle#end()
 	NeoBundleCheck
 endif
@@ -147,14 +152,10 @@ let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 
 " vim-indent-guides
 let g:indent_guides_enable_on_vim_startup=1
-" ガイドをスタートするインデントの量
 let g:indent_guides_start_level=1
-" 自動カラー無効
 let g:indent_guides_auto_colors=1
-" インデントの色
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#222211 ctermbg=black
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#111122 ctermbg=darkgray
-" ガイドの幅
 let g:indent_guides_guide_size = 1
 " vim-indent-guides End
 
@@ -163,23 +164,63 @@ set tabstop=4
 set shiftwidth=4
 set autoindent
 set smartindent
+set textwidth=0
+
+" Kaoriya版GVIMの上書き対策
+autocmd FileType text setlocal textwidth=0
 
 set list
 set listchars=tab:>-,trail:-,nbsp:%
 
 colorscheme hybrid
 
+set number
+set relativenumber
+
 " vim-quickrun settings
 let g:quickrun_config = {
 \	"cs"	: {
 \		"command"	: "csc"
 \	},
+\	"cs/csc2"	: {
+\		"command"	: "csc2"
+\	},
+\	"c"		: {
+\		"command"	: "cl"
+\	},
+\	"cpp"	: {
+\		"command"	: "cl",
+\		"cmdopt"	: "/EHsc"
+\	},
+\	"java/utf8"	: {
+\		"command"	: "java",
+\		"exec"		: ['javac -J-Dfile.encoding=UTF8 %o %s', '%c -Dfile.encoding=UTF8 %s:t:r %a']
+\	},
 \	"java"	: {
-\		"cmdopt"	: "-encoding utf8"
+\		"command"	: "java",
+\		"cmdopt"	: "-encoding utf8",
+\		"exec"		: ["javac %o %s", "%c %s:t:r %a"],
+\		"hook/output_encode/enable"	: 1,
+\		"hook/output_encode/encoding"	: "shift-jis",
+\	},
+\	"java/cp932"	: {
+\		"cmdopt"	: "-encoding cp932",
+\		"command"	: "java",
+\		"exec"		: ["javac %o %s", "%c %s:t:r %a"],
+\		"hook/output_encode/enable"	: 1,
+\		"hook/output_encode/encoding"	: "shift-jis",
 \	},
 \	"tex"	: {
-\		"command"	: "platex",
-\		"cmdopt"	: "-kanji=utf8"
+\		"command"	: "latexmk",
+\		"cmdopt"	: "-pv",
+\		"outputter" : "error",
+\	},
+\	"processing"	: {
+\		"command"	: "%userprofile%\\OneDrive\\Programs\\processing\\processing.exe",
+\		"cmdopt"	: "--run",
+\	},
+\	"_"		: {
+\		"command"	: "powershell"
 \	}
 \}
 
