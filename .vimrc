@@ -10,6 +10,7 @@ endif
 set nf="" "おれは、8進数をやめるぞー！
 set fileencoding=utf-8
 set fileformat=dos
+set statusline=%F%m%r%h%w\%=[FORMAT=%{&ff}]\ [TYPE=%Y]\ [ENCODING=%{&fenc}]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
 
 set nocompatible
 
