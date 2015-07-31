@@ -31,6 +31,8 @@ if has('vim_starting')
 	NeoBundle 'thinca/vim-quickrun'
 	NeoBundle 'scrooloose/nerdtree'
 	NeoBundle 'Townk/vim-autoclose'
+	NeoBundle 'kannokanno/previm'
+	NeoBundle 'tyru/open-browser.vim'
 
 	NeoBundle 'OrangeT/vim-csharp'
 	
