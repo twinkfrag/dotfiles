@@ -4,9 +4,11 @@ name = あると
 [core]
 whitespace = cr-at-eol
 excludesfile = $HOME/.gitignore
+editor = gvim
 [alias]
 tree = log --graph --pretty='format:%C(yellow)%h%Creset %s %Cgreen(%an)%Creset %Cred%d%Creset'
 st = status
 
 [push]
 default = simple
+
