@@ -1,6 +1,3 @@
-[user]
-email = mail@twinkfrag.net
-name = あると
 [core]
 whitespace = cr-at-eol
 excludesfile = $HOME/.gitignore
