@@ -8,18 +8,3 @@ st = status
 
 [push]
 default = simple
-[diff]
-    tool = vsdiffmerge
-
-
-[merge]
-    tool = vsdiffmerge
-
-[difftool "vsdiffmerge"]
-    cmd = \"C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\Common7\\IDE\\vsdiffmerge.exe\" \"$LOCAL\" \"$REMOTE\" //t
-    keepbackup = false
-
-[mergetool "vsdiffmerge"]
-    cmd = \"C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\Common7\\IDE\\vsdiffmerge.exe\" \"$REMOTE\" \"$LOCAL\" \"$BASE\" \"$MERGED\" //m
-    trustexitcode = true
-    keepbackup = false
