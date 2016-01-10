@@ -9,7 +9,7 @@ mklink %userprofile%\.vimrc %~dp0.vimrc
 mklink %userprofile%\.gvimrc %~dp0.gvimrc
 mklink %userprofile%\.gitignore %~dp0.gitignore
 copy .gitconfig %userprofile%\.gitconfig
-mklink %userprofile%\.gitconfig.user %~dp0.gitconfig.user
+mklink %userprofile%\.user.gitconfig %~dp0.user.gitconfig
 mklink %userprofile%\.vsvimrc %~dp0.vsvimrc
 mklink %userprofile%\.latexmkrc %~dp0.latexmkrc
 mklink /d %userprofile%\.ssh %~dp0..\.ssh
