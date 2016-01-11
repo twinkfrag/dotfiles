@@ -1,14 +1,12 @@
 # cmd /c mklink $profile %this%
 # Set-ExecutionPolicy RemoteSigned
 $window = (Get-Host).UI.RawUI
-$window.WindowTitle = "Script Center"
+$window.WindowTitle = "Crown Hears"
 
-# ConEmu64 /Dir (Get-Location).Path /Single
+Set-Alias Open Invoke-Item
 
-# if(Test-Path Function:\Prompt) {Rename-Item Function:\Prompt PrePoshGitPrompt -Force}
-# 
-# # Load posh-git example profile
-# . 'C:\tools\poshgit\dahlbyk-posh-git-bc8dbd5\profile.example.ps1'
-# 
-# Rename-Item Function:\Prompt PoshGitPrompt -Force
-# function Prompt() {if(Test-Path Function:\PrePoshGitPrompt){++$global:poshScope; New-Item function:\script:Write-host -value "param([object] `$object, `$backgroundColor, `$foregroundColor, [switch] `$nonewline) " -Force | Out-Null;$private:p = PrePoshGitPrompt; if(--$global:poshScope -eq 0) {Remove-Item function:\Write-Host -Force}}PoshGitPrompt}
+function global:Wait()
+{
+    Write-Host "Press Any Key..."
+    [System.Console]::ReadKey() | Out-Null
+}

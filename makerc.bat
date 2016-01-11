@@ -3,7 +3,6 @@ openfiles > NUL 2>&1
 if NOT %ERRORLEVEL% EQU 0 goto NotAdmin 
 echo ä«óùé“å†å¿Ç≈é¿çsíÜ
 chdir %~dp0
-pwd
 mkdir %localappdata%\vim
 mklink %userprofile%\.vimrc %~dp0.vimrc
 mklink %userprofile%\.gvimrc %~dp0.gvimrc
