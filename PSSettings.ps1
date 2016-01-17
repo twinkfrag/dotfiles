@@ -25,7 +25,15 @@ foreach ($name in $linkFilename)
 New-Item (New-Object DirectoryInfo([Path]::Combine($env:USERPROFILE, ".ssh"))) -Value $dir.Parent.GetDirectories(".ssh").FullName -ItemType SymbolicLink
 Copy-Item -Path $dir.GetFiles(".gitconfig").FullName -Destination $env:USERPROFILE
 
+(New-Object DirectoryInfo(([Path]::Combine($env:LOCALAPPDATA, "vim")))).Create()
+
 #Set-NetConnectionProfile -NetworkCategory Private
 #Enable-PSRemoting
+
+function global:Wait()
+{
+    Write-Host "Press Any Key..."
+    [System.Console]::ReadKey() | Out-Null
+}
 
 Wait
