@@ -16,7 +16,8 @@ $linkFilename = @(
     ".gitignore", ".user.gitconfig", 
     ".vsvimrc", 
     ".latexmkrc", 
-    ".bashrc", ".bash_profile"
+    ".bashrc", ".bash_profile",
+    ".editorconfig"
 )
 foreach ($name in $linkFilename)
 {
