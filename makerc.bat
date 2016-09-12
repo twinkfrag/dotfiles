@@ -14,6 +14,7 @@ mklink %userprofile%\.latexmkrc %~dp0.latexmkrc
 mklink %userprofile%\.bashrc %~dp0.bashrc
 mklink %userprofile%\.bash_profile %~dp0.bash_profile
 mklink /d %userprofile%\.ssh %~dp0..\.ssh
+mklink %userprofile%\.editorconfig %~dp0.editorconfig
 pause
 goto End
  

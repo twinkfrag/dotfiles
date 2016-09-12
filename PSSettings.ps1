@@ -24,6 +24,7 @@ foreach ($name in $linkFilename)
     New-Item (New-Object FileInfo([Path]::Combine($env:USERPROFILE, $name))) -Value $dir.GetFiles($name).FullName -ItemType SymbolicLink
 }
 New-Item (New-Object DirectoryInfo([Path]::Combine($env:USERPROFILE, ".ssh"))) -Value $dir.Parent.GetDirectories(".ssh").FullName -ItemType SymbolicLink
+New-Item (New-Object DirectoryInfo([Path]::Combine($env:APPDATA, "Code\\User"))) -Value $dir.GetDirectories("VSCodeUserSettings").FullName -ItemType SymbolicLink
 Copy-Item -Path $dir.GetFiles(".gitconfig").FullName -Destination $env:USERPROFILE
 
 (New-Object DirectoryInfo(([Path]::Combine($env:LOCALAPPDATA, "vim")))).Create()
