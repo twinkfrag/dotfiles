@@ -4,12 +4,17 @@ Set-ExecutionPolicy RemoteSigned
 
 $dir = New-Object DirectoryInfo(Split-Path -Parent $MyInvocation.MyCommand.Definition)
 
-$targetProfile = $dir.GetFiles("Microsoft.PowerShell_profile.ps1")
+New-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Console\TrueTypeFont' -Name 932.1 -PropertyType String -Value "Consolas"
+New-ItemProperty -Path 'HKCU:\Console\%SystemRoot%_System32_WindowsPowerShell_v1.0_powershell.exe\' -Name FontFamily -PropertyType String -Value "Consolas"
+
+$psProfile = $dir.GetFiles("Microsoft.PowerShell_profile.ps1")
+$psiseProfile = $dir.GetFiles("Microsoft.PowerShellISE_profile.ps1")
 PowerShell -File $targetProfile
 
 $profileInfo = New-Object FileInfo($profile)
 $profileInfo.Directory.Create()
-New-Item $profileInfo -Value $targetProfile.FullName -ItemType SymbolicLink
+New-Item $profileInfo -Value $psProfile.FullName -ItemType SymbolicLink
+New-Item (Join-Path $profileInfo.Directory "Microsoft.PowerShellISE_profile.ps1") -Value $psiseProfile.FullName -ItemType SymbolicLink
 
 $linkFilename = @(
     ".vimrc", ".gvimrc", 
@@ -37,10 +42,4 @@ Copy-Item -Path $dir.GetFiles(".gitconfig").FullName -Destination $env:USERPROFI
 #Set-NetConnectionProfile -NetworkCategory Private
 #Enable-PSRemoting
 
-function global:Wait()
-{
-    Write-Host "Press Any Key..."
-    [System.Console]::ReadKey() | Out-Null
-}
-
-Wait
+Pause
