@@ -6,5 +6,25 @@
         "*.txt": "Markdown"
     },
     "editor.minimap.enabled": true,
-    "window.zoomLevel": 0
+    "window.zoomLevel": 0, 
+
+    "terminal.integrated.fontSize": 16,
+    "shellLauncher.shells.windows": [
+        {
+          "shell": "C:\\WINDOWS\\System32\\cmd.exe",
+          "label": "cmd"
+        },
+        {
+          "shell": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "label": "PowerShell"
+        },
+        {
+          "shell": "C:\\Program Files\\Git\\bin\\bash.exe",
+          "label": "Git bash"
+        },
+        {
+          "shell": "C:\\WINDOWS\\System32\\bash.exe",
+          "label": "WSL Bash"
+        }
+    ]
 }

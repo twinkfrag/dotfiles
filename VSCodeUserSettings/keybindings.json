@@ -1,8 +1,16 @@
 // 既定値を上書きするには、このファイル内にキー バインドを挿入します
 [
     {
-        "key": "ctrl+k ctrl+d",
-        "command": "editor.action.format",
-        "when": "editorTextFocus"
+        "key": "ctrl+alt+oem_3",
+        "command": "shellLauncher.launch"
+    }, 
+    {
+        "key": "ctrl+oem_3",
+        "command": "workbench.action.terminal.focus"
+    },
+    {
+        "key": "ctrl+oem_3",
+        "command": "workbench.action.terminal.focusNext",
+        "when": "terminalFocus"
     }
 ]
