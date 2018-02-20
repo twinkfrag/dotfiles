@@ -9,7 +9,6 @@ New-ItemProperty -Path 'HKCU:\Console\%SystemRoot%_System32_WindowsPowerShell_v1
 
 $psProfile = $dir.GetFiles("Microsoft.PowerShell_profile.ps1")
 $psiseProfile = $dir.GetFiles("Microsoft.PowerShellISE_profile.ps1")
-PowerShell -File $targetProfile
 
 $profileInfo = New-Object FileInfo($profile)
 $profileInfo.Directory.Create()
