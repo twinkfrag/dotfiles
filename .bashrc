@@ -1,2 +1,2 @@
 alias open='PowerShell Invoke-Item'
-alias la='ls -la'
+alias ll='ls -alF'

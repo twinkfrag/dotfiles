@@ -1,6 +1,7 @@
 [core]
 whitespace = cr-at-eol
 excludesfile = $HOME/.gitignore
+autocrlf = false
 editor = code
 [alias]
 tree = log --graph --pretty='format:%C(yellow)%h%Creset %s %Cgreen(%an)%Creset %Cred%d%Creset'

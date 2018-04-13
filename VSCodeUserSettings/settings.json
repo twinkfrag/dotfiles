@@ -43,5 +43,6 @@
       ],
       "label": "WSL Rails server"
     }
-  ]
+  ],
+  "git.autofetch": false
 }
