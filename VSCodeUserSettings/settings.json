@@ -1,15 +1,40 @@
 // Place your settings in this file to overwrite the default settings
 {
+  "editor.find.autoFindInSelection": true,
   "editor.fontSize": 16,
-  // 言語に対するファイルの関連付け (例 "*.extension": "html") を構成します。これらの関連付けは、インストールされている言語の既定の関連付けより優先されます。
+  "editor.minimap.enabled": true,
+  "editor.mouseWheelZoom": true,
+  "editor.renderWhitespace": "boundary",
+  "extensions.ignoreRecommendations": true,
   "files.associations": {
     "*.txt": "Markdown"
   },
-  "editor.minimap.enabled": true,
+  "files.autoGuessEncoding": true,
+  "files.defaultLanguage": "Markdown",
+  "files.eol": "\n",
   "window.zoomLevel": 0,
   "workbench.startupEditor": "newUntitledFile",
-
+  "terminal.integrated.commandsToSkipShell": [
+    "workbench.files.action.focusOpenEditorsView",
+    "workbench.action.terminal.clearSelection",
+    "workbench.action.terminal.copySelection",
+    "workbench.action.terminal.findWidget.history.showNext",
+    "workbench.action.terminal.findWidget.history.showPrevious",
+    "workbench.action.terminal.focusNext",
+    "workbench.action.terminal.focusNextPane",
+    "workbench.action.terminal.scrollDown",
+    "workbench.action.terminal.scrollDownPage",
+    "workbench.action.terminal.scrollToBottom",
+    "workbench.action.terminal.scrollToTop",
+    "workbench.action.terminal.scrollUp",
+    "workbench.action.terminal.scrollUpPage",
+    "workbench.action.terminal.selectAll",
+    "workbench.action.terminal.selectToPreviousCommand",
+    "workbench.action.terminal.split",
+  ],
   "terminal.integrated.fontSize": 16,
+  "terminal.integrated.rendererType": "dom",
+  "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
   "shellLauncher.shells.windows": [
     {
       "shell": "C:\\WINDOWS\\System32\\cmd.exe",
@@ -44,5 +69,6 @@
       "label": "WSL Rails server"
     }
   ],
-  "git.autofetch": false
+  "git.autofetch": false,
+  "docker.attachShellCommand.windowsContainer": "wsl",
 }
