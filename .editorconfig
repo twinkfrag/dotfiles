@@ -1,10 +1,10 @@
 root = true
 
 [*]
-end_of_line = crlf
 charset = utf-8
 
 [*.cs]
+end_of_line = crlf
 indent_style = tab
 indent_size = 4
 
