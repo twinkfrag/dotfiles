@@ -31,9 +31,13 @@ New-Item (New-Object DirectoryInfo([Path]::Combine($env:USERPROFILE, ".ssh"))) -
 if (![Directory]::Exists([Path]::Combine($env:APPDATA, "Code"))) 
 {
     [Directory]::CreateDirectory([Path]::Combine($env:APPDATA, "Code"))
+    [Directory]::CreateDirectory([Path]::Combine($env:APPDATA, "Code\\User"))
 }
-New-Item (New-Object DirectoryInfo([Path]::Combine($env:APPDATA, "Code\\User"))) -Value $dir.GetDirectories("VSCodeUserSettings").FullName -ItemType SymbolicLink
-New-Item (New-Object FileInfo([Path]::Combine($env:APPDATA, "ConEmu.xml"))) -Value $dir.GetFiles("ConEmu.xml").FullName -ItemType SymbolicLink
+Remove-Item [Path]::Combine($env:APPDATA, "Code\\User\\keybindings.json")
+Remove-Item [Path]::Combine($env:APPDATA, "Code\\User\\settings.json")
+New-Item (New-Object DirectoryInfo([Path]::Combine($env:APPDATA, "Code\\User"))) -Value [Path]::Combine($dir.GetDirectories("VSCodeUserSettings").FullName, "keybindings.json") -ItemType SymbolicLink
+New-Item (New-Object DirectoryInfo([Path]::Combine($env:APPDATA, "Code\\User"))) -Value [Path]::Combine($dir.GetDirectories("VSCodeUserSettings").FullName, "settings.json") -ItemType SymbolicLink
+
 Copy-Item -Path $dir.GetFiles(".gitconfig").FullName -Destination $env:USERPROFILE
 
 (New-Object DirectoryInfo(([Path]::Combine($env:LOCALAPPDATA, "vim")))).Create()

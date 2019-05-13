@@ -52,23 +52,8 @@
       "shell": "C:\\WINDOWS\\System32\\wsl.exe",
       "label": "WSL"
     },
-    {
-      "shell": "C:\\WINDOWS\\System32\\wsl.exe",
-      "args": [
-        "bash -ic",
-        "bundle exec guard"
-      ],
-      "label": "WSL Ruby Guard"
-    },
-    {
-      "shell": "C:\\WINDOWS\\System32\\wsl.exe",
-      "args": [
-        "bash -ic",
-        "rails s"
-      ],
-      "label": "WSL Rails server"
-    }
   ],
   "git.autofetch": false,
-  "docker.attachShellCommand.windowsContainer": "wsl",
+  "files.insertFinalNewline": true,
+  "workbench.iconTheme": "vscode-icons"
 }
