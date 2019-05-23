@@ -34,7 +34,7 @@
   ],
   "terminal.integrated.fontSize": 16,
   "terminal.integrated.rendererType": "dom",
-  "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+  "terminal.integrated.shell.windows": "C:\\Program Files\\PowerShell\\6\\pwsh.exe",
   "window.zoomLevel": 0,
   "workbench.iconTheme": "vscode-icons",
   "workbench.startupEditor": "newUntitledFile",
@@ -48,7 +48,7 @@
       "label": "cmd"
     },
     {
-      "shell": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+      "shell": "C:\\Program Files\\PowerShell\\6\\pwsh.exe",
       "label": "PowerShell"
     },
     {
