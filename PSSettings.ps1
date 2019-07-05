@@ -18,7 +18,6 @@ New-Item (Join-Path $profileInfo.Directory "Microsoft.PowerShellISE_profile.ps1"
 $linkFilename = @(
     ".vimrc", ".gvimrc", 
     ".gitignore", ".user.gitconfig", 
-    ".vsvimrc", 
     ".latexmkrc", 
     ".bashrc", ".bash_profile",
     ".editorconfig"

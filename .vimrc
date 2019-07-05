@@ -2,9 +2,9 @@
 "set noundofile
 
 if has('windows')
-	set directory=%LocalAppData%/vim
-	set undodir=%LocalAppData%/vim
-	set backupdir=%LocalAppData%/vim
+  set directory=%LocalAppData%/vim
+  set undodir=%LocalAppData%/vim
+  set backupdir=%LocalAppData%/vim
 endif
 
 set nf="" "おれは、8進数をやめるぞー！
@@ -16,41 +16,41 @@ set nocompatible
 set autochdir
 
 if has('vim_starting')
-	set runtimepath+=$VIM/vimfiles/vim/bundle/neobundle.vim
-	call neobundle#begin(expand('$VIM/vimfiles/vim/bundle'))
+  set runtimepath+=$VIM/vimfiles/vim/bundle/neobundle.vim
+  call neobundle#begin(expand('$VIM/vimfiles/vim/bundle'))
 
-	NeoBundleFetch 'Shougo/neobundle.vim'
+  NeoBundleFetch 'Shougo/neobundle.vim'
 
-	NeoBundle 'Shougo/neocomplete.vim'
-	NeoBundle 'Shougo/neosnippet.vim'
-	NeoBundle 'Shougo/neosnippet-snippets'
+  NeoBundle 'Shougo/neocomplete.vim'
+  NeoBundle 'Shougo/neosnippet.vim'
+  NeoBundle 'Shougo/neosnippet-snippets'
 
-	NeoBundle 'Shougo/unite.vim'
-	NeoBundle 'Shougo/vimshell.vim'
+  NeoBundle 'Shougo/unite.vim'
+  NeoBundle 'Shougo/vimshell.vim'
 
-	NeoBundle 'thinca/vim-quickrun'
-	NeoBundle 'scrooloose/nerdtree'
-	NeoBundle 'Townk/vim-autoclose'
-	NeoBundle 'kannokanno/previm'
-	NeoBundle 'tyru/open-browser.vim'
+  NeoBundle 'thinca/vim-quickrun'
+  NeoBundle 'scrooloose/nerdtree'
+  NeoBundle 'Townk/vim-autoclose'
+  NeoBundle 'kannokanno/previm'
+  NeoBundle 'tyru/open-browser.vim'
 
-	NeoBundle 'OrangeT/vim-csharp'
-	
-	NeoBundle 'nathanaelkane/vim-indent-guides'
-	NeoBundle 'w0ng/vim-hybrid'
+  NeoBundle 'OrangeT/vim-csharp'
+  
+  NeoBundle 'nathanaelkane/vim-indent-guides'
+  NeoBundle 'w0ng/vim-hybrid'
 
-	NeoBundle 'taku25/vim-visualstudio'
-	NeoBundle 'sophacles/vim-processing'
-	call neobundle#end()
-	NeoBundleCheck
+  NeoBundle 'taku25/vim-visualstudio'
+  NeoBundle 'sophacles/vim-processing'
+  call neobundle#end()
+  NeoBundleCheck
 endif
 filetype plugin indent on
 
 let g:neocomplete#enable_at_startup = 1
 " NeoSnippet Settings
-imap <C-k>	<Plug>(neosnippet_expand_or_jump)
-smap <C-k>	<Plug>(neosnippet_expand_or_jump)
-xmap <C-k>	<Plug>(neosnippet_expand_target)
+imap <C-k>  <Plug>(neosnippet_expand_or_jump)
+smap <C-k>  <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>  <Plug>(neosnippet_expand_target)
 
 " SuperTab like snippets behavior.
 imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
@@ -81,10 +81,10 @@ let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
 
 " Define dictionary.
 let g:neocomplete#sources#dictionary#dictionaries = {
-    \ 'default' : '',
-    \ 'vimshell' : $HOME.'/.vimshell_hist',
-    \ 'scheme' : $HOME.'/.gosh_completions'
-        \ }
+  \ 'default' : '',
+  \ 'vimshell' : $HOME.'/.vimshell_hist',
+  \ 'scheme' : $HOME.'/.gosh_completions'
+    \ }
 
 " Define keyword.
 if !exists('g:neocomplete#keyword_patterns')
@@ -183,48 +183,41 @@ set relativenumber
 
 " vim-quickrun settings
 let g:quickrun_config = {
-\	"cs"	: {
-\		"command"	: "csc"
-\	},
-\	"cs/csc2"	: {
-\		"command"	: "csc2"
-\	},
-\	"c"		: {
-\		"command"	: "cl"
-\	},
-\	"cpp"	: {
-\		"command"	: "cl",
-\		"cmdopt"	: "/EHsc"
-\	},
-\	"java/utf8"	: {
-\		"command"	: "java",
-\		"exec"		: ['javac -J-Dfile.encoding=UTF8 %o %s', '%c -Dfile.encoding=UTF8 %s:t:r %a']
-\	},
-\	"java"	: {
-\		"command"	: "java",
-\		"cmdopt"	: "-encoding utf8",
-\		"exec"		: ["javac %o %s", "%c %s:t:r %a"],
-\		"hook/output_encode/enable"	: 1,
-\		"hook/output_encode/encoding"	: "shift-jis",
-\	},
-\	"java/cp932"	: {
-\		"cmdopt"	: "-encoding cp932",
-\		"command"	: "java",
-\		"exec"		: ["javac %o %s", "%c %s:t:r %a"],
-\		"hook/output_encode/enable"	: 1,
-\		"hook/output_encode/encoding"	: "shift-jis",
-\	},
-\	"tex"	: {
-\		"command"	: "latexmk",
-\		"cmdopt"	: "-pv",
-\		"outputter" : "error",
-\	},
-\	"processing"	: {
-\		"command"	: "%userprofile%\\OneDrive\\Programs\\processing\\processing.exe",
-\		"cmdopt"	: "--run",
-\	},
-\	"_"		: {
-\		"command"	: "powershell"
-\	}
+\  "cs"  : {
+\    "command"  : "csc"
+\  },
+\  "c"    : {
+\    "command"  : "cl"
+\  },
+\  "cpp"  : {
+\    "command"  : "cl",
+\    "cmdopt"  : "/EHsc"
+\  },
+\  "java/utf8"  : {
+\    "command"  : "java",
+\    "exec"    : ['javac -J-Dfile.encoding=UTF8 %o %s', '%c -Dfile.encoding=UTF8 %s:t:r %a']
+\  },
+\  "java"  : {
+\    "command"  : "java",
+\    "cmdopt"  : "-encoding utf8",
+\    "exec"    : ["javac %o %s", "%c %s:t:r %a"],
+\    "hook/output_encode/enable"  : 1,
+\    "hook/output_encode/encoding"  : "shift-jis",
+\  },
+\  "java/cp932"  : {
+\    "cmdopt"  : "-encoding cp932",
+\    "command"  : "java",
+\    "exec"    : ["javac %o %s", "%c %s:t:r %a"],
+\    "hook/output_encode/enable"  : 1,
+\    "hook/output_encode/encoding"  : "shift-jis",
+\  },
+\  "tex"  : {
+\    "command"  : "latexmk",
+\    "cmdopt"  : "-pv",
+\    "outputter" : "error",
+\  },
+\  "_"    : {
+\    "command"  : "powershell"
+\  }
 \}
 

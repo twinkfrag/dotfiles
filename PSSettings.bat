@@ -1,11 +1,11 @@
 echo off
 openfiles > NUL 2>&1 
 if %ERRORLEVEL% EQU 0 goto Admin 
-echo àÍî å†å¿Ç≈é¿çsíÜ
+echo Running As User
 powershell -Command Start-Process %0 -Verb RunAs
 exit
  
 :Admin 
-echo ä«óùé“å†å¿Ç≈é¿çsíÜ
+echo Running As Admin
 call powershell -ExecutionPolicy ByPass -File %~dp0PSSettings.ps1
 :End
