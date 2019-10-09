@@ -1,9 +1,15 @@
-# cmd /c mklink $profile %this%
-# Set-ExecutionPolicy RemoteSigned
-# chcp 65001
-
 $Console = (Get-Host).UI.RawUI
-$Console.WindowTitle = "Crown Hearts"
+$Console.WindowTitle = "Crown Hearts $($PSVersionTable.PSVersion.Major)"
+
+if ((Get-Host).Name.Contains("Code"))
+{
+    Write-Host "PowerShell v$($PSVersionTable.PSVersion)"
+}
+if ((Get-Host).Name.Contains("ISE")) 
+{
+    $Console.WindowTitle += " ISE"
+    $psISE.Options.FontSize = 12
+}
 
 function Pause
 {
