@@ -19,7 +19,7 @@ $linkFilename = @(
     ".vimrc", ".gvimrc", 
     ".gitignore", ".user.gitconfig", 
     ".latexmkrc", 
-    ".bashrc", ".bash_profile",
+    ".bashrc",
     ".editorconfig"
 )
 foreach ($name in $linkFilename)
