@@ -8,10 +8,10 @@
   "editor.renderWhitespace": "boundary",
   "extensions.ignoreRecommendations": true,
   "files.associations": {
-    "*.txt": "Markdown"
+    "*.txt": "markdown"
   },
   "files.autoGuessEncoding": true,
-  "files.defaultLanguage": "Markdown",
+  "files.defaultLanguage": "markdown",
   "files.eol": "\n",
   "files.insertFinalNewline": true,
   "terminal.integrated.commandsToSkipShell": [
