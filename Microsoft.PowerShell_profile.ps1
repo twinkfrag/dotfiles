@@ -10,6 +10,10 @@ if ((Get-Host).Name.Contains("ISE"))
     $Console.WindowTitle += " ISE"
     $psISE.Options.FontSize = 12
 }
+if (([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator"))
+{
+    $Console.WindowTitle += " [Admin]"
+}
 
 function Pause
 {
