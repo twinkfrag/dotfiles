@@ -1,5 +1,6 @@
-$latex    = 'platex -kanji=utf8 -guess-input-enc -synctex=1 -interaction=nonstopmode %S';
-$dvipdf   = 'dvipdfmx %S';
-$bibtex   = 'pbibtex -kanji=utf8 %B';
-$pdf_mode = 3; #use dvipdf
-
+$latex      = 'platex -synctex=1 -halt-on-error %O %S';
+$bibtex     = 'pbibtex %O %B';
+$dvipdf     = 'dvipdfmx %O -o %D %S';
+$makeindex  = 'mendex %O -o %D %S';
+$max_repeat = 5;
+$pdf_mode   = 3; #use dvipdf
