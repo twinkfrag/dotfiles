@@ -28,20 +28,6 @@ foreach ($name in $linkFilename)
 }
 New-Item (New-Object DirectoryInfo([Path]::Combine($env:USERPROFILE, ".ssh"))) -Value $dir.Parent.GetDirectories(".ssh").FullName -ItemType SymbolicLink
 
-$CodeUserDir = New-Object DirectoryInfo([Path]::Combine($env:APPDATA, "Code\\User"))
-$TargetDir = $dir.GetDirectories("VSCodeUserSettings")
-if (!$CodeUserDir.Exists) 
-{
-    $CodeUserDir.Parent.Create()
-    $CodeUserDir.Create()
-}
-Remove-Item [Path]::Combine($CodeUsertDir.FullName, "keybindings.json")
-Remove-Item [Path]::Combine($CodeUsertDir.FullName, "locale.json")
-Remove-Item [Path]::Combine($CodeUsertDir.FullName, "settings.json")
-New-Item [Path]::Combine($CodeUsertDir.FullName, "keybindings.json") -Value [Path]::Combine($TargetDir.FullName, "keybindings.json") -ItemType SymbolicLink
-New-Item [Path]::Combine($CodeUsertDir.FullName, "locale.json")      -Value [Path]::Combine($TargetDir.FullName, "locale.json")      -ItemType SymbolicLink
-New-Item [Path]::Combine($CodeUsertDir.FullName, "settings.json")    -Value [Path]::Combine($TargetDir.FullName, "settings.json")    -ItemType SymbolicLink
-
 Copy-Item -Path $dir.GetFiles(".gitconfig").FullName -Destination $env:USERPROFILE
 
 (New-Object DirectoryInfo(([Path]::Combine($env:LOCALAPPDATA, "vim")))).Create()
