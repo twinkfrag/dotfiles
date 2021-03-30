@@ -7,4 +7,6 @@ desktop.ini
 thumbs.db
 *.lnk
 
+.bash_history
+
 VSCodeUserSettings/**/

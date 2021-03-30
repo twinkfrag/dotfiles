@@ -4,9 +4,9 @@ $dir = New-Object DirectoryInfo(Split-Path -Parent $MyInvocation.MyCommand.Defin
 
 $linkFilenames = @(
     ".vimrc", ".gvimrc", 
-    ".gitignore", ".user.gitconfig", 
+    ".gitignore", ".git.gitconfig", 
     ".latexmkrc", 
-    ".bashrc",
+    ".bashrc", ".bash.bashrc", ".bash_history",
     ".editorconfig"
 )
 foreach ($name in $linkFilenames)

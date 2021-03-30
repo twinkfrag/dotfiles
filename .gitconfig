@@ -1,5 +1,5 @@
 [core]
 	symlinks = true
 [include]
-	path = .user.gitconfig
+	path = .git.gitconfig
 

@@ -1,0 +1,15 @@
+[core]
+whitespace = cr-at-eol
+excludesfile = $HOME/.gitignore
+autocrlf = false
+safecrlf = true
+editor = code --wait
+quotepath = false
+
+[alias]
+tree = log --graph --pretty='format:%C(yellow)%h%Creset %s %Cgreen(%an)%Creset %Cred%d%Creset'
+st = status
+clone = clone --recursive
+
+[push]
+default = simple
