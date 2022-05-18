@@ -3,8 +3,10 @@ set guifontwide=MS_Gothic:h14
 set lines=40
 set columns=120
 set guioptions-=T
-"set guioptions-=m "ƒƒjƒ…[ƒo[
 colorscheme hybrid
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#222211 ctermbg=black
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#111122 ctermbg=darkgray
+
+" Kaoriyaç‰ˆGVIMã®ä¸Šæ›¸ãå¯¾ç­–
+autocmd FileType text setlocal textwidth=0
 
