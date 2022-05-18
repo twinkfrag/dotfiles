@@ -39,18 +39,6 @@ if [ -f /proc/sys/fs/binfmt_misc/WSLInterop ]; then
   SUBSYSTEM="WSL";
 fi
 
-function __return_colorized() {
-  __return=$?
-  if [ $__return = "0" ]; then
-    echo -en "\e[46;30m"
-  else
-    echo -en "\e[43;31m"
-  fi
-  local r2="   $__return"
-  echo -en "[${r2: -3}]\e[0;0m "
-  return 0
-}
-
 function __user_host_colorized() {
   if [ -v SUBSYSTEM ]; then
     echo -en "\e[92m$USER@$HOSTNAME/\e[42;30m$SUBSYSTEM"
