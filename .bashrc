@@ -42,14 +42,14 @@ function __user_host_colorized() {
 }
 
 PS1="\
-\[\`__return_colorized\`\] \
+\[\`__return_colorized\`\]\n\
 \[\`__user_host_colorized\`\]\
 \[\e[00m\]: \
 \[\e[93m\]\w\
 \[\e[0m\]\n\$ "
-# -------- to tiny console end --------
 
 export EDITOR=vim
+# -------- to tiny console end --------
 
 
 # ----------------------------
