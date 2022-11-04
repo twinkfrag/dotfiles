@@ -8,7 +8,7 @@ fi
 bind '"\e[A": history-search-backward'
 # dn key
 bind '"\e[B": history-search-forward'
-bind 'esc: kill-whole-line'
+# bind '"\e": kill-whole-line'
 
 
 # history settings
@@ -58,3 +58,8 @@ PS1="\
 \[\e[93m\]\w\
 \[\e[36m\]\`__git_ps1\`\
 \[\e[0m\]\n\$ "
+
+if which code 1>/dev/null 2>&1
+then
+  export EDITOR="$(which code) --wait"
+fi
