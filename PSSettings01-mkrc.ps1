@@ -3,7 +3,7 @@ using namespace System.IO;
 $dir = New-Object DirectoryInfo(Split-Path -Parent $MyInvocation.MyCommand.Definition)
 
 $linkFilenames = @(
-    ".vimrc", ".gvimrc", ".vim-tyny.vimrc",
+    ".vimrc", ".gvimrc", ".vim-tiny.vimrc",
     ".gitignore", ".git.gitconfig", 
     ".latexmkrc", 
     ".bashrc", ".bash.bashrc", ".bash_history",

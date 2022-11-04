@@ -3,16 +3,19 @@ if filereadable(expand('~/.vim-tiny.vimrc'))
 endif
 
 set noundofile
-if has('windows')
-  if has('linux')
-    call mkdir('/var/tmp/vim', 'p')
+if has('linux')
+  if isdirectory('/var/tmp/vim')
     set directory=/var/tmp/vim
     set backupdir=/var/tmp/vim
   else
-    call mkdir('%LocalAppData%/vim', 'p')
-    set directory=%LocalAppData%/vim
-    set backupdir=%LocalAppData%/vim
+    call mkdir('/tmp/vim', 'p')
+    set directory=/tmp/vim
+    set backupdir=/tmp/vim
   endif
+elseif has('windows')
+  call mkdir('%LocalAppData%/vim', 'p')
+  set directory=%LocalAppData%/vim
+  set backupdir=%LocalAppData%/vim
 endif
 
 
@@ -32,8 +35,13 @@ set tabstop=4
 set shiftwidth=4
 set textwidth=0
 
-set list
-set listchars=tab:>-,trail:-,nbsp:%
+"set list
+"set listchars=tab:>-,trail:-,nbsp:%,extends:»,precedes:«
+"hi NonText    ctermbg=black ctermfg=17
+"hi SpecialKey ctermbg=black ctermfg=17
+"" SpecialKey, needed for cursorline
+"autocmd ColorScheme * htmlhighlightskip link MySpecialKey SpecialKey
+"autocmd VimEnter,WinEnter * let w:m_sp = matchadd("MySpecialKey", '\(\t\| \+$\)')
 
 "colorscheme hybrid
 
