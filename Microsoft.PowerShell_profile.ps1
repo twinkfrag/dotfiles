@@ -49,7 +49,14 @@ function Create-SymbolicLink
     # New-Item $profileInfo -Value $psProfile.FullName -ItemType SymbolicLink
 
 }
+
+function Exit-PS {
+    Write-Host "Exitting PowerShell..."
+    Read-Host
+    exit $args
+}
  
 Set-Alias sudo Invoke-Command-RunAs
 Set-Alias su Start-RunAs
 Set-Alias Open Invoke-Item
+Set-Alias ] Exit-PS
