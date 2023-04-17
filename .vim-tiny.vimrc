@@ -22,8 +22,8 @@ set wrapscan
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
 " UI
-set mouse=a
-set ttymouse=xterm2
+"set mouse=a
+"set ttymouse=xterm2
 set belloff=all
 set autochdir
 

@@ -15,13 +15,15 @@ if [ -x /usr/bin/dircolors ]; then
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
-alias ll='ls -alFh --show-control-char'
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 # -------- from ubuntu default end --------
 
+alias ll='ls -alFh --show-control-char'
+alias sudo='sudo '
+complete -cf sudo
 
 function __return_colorized() {
   __return=$?
@@ -47,6 +49,11 @@ PS1="\
 \[\e[00m\]: \
 \[\e[93m\]\w\
 \[\e[0m\]\n\$ "
+
+# up key
+bind '"\e[A": history-search-backward'
+# dn key
+bind '"\e[B": history-search-forward'
 
 export EDITOR=vim
 # -------- to tiny console end --------

@@ -3,14 +3,6 @@ if [ -d ~/.anyenv ]; then
   eval "$(anyenv init -)"
 fi
 
-
-# up key
-bind '"\e[A": history-search-backward'
-# dn key
-bind '"\e[B": history-search-forward'
-# bind '"\e": kill-whole-line'
-
-
 # history settings
 HISTSIZE=1000
 HISTFILESIZE=10000
@@ -56,7 +48,7 @@ PS1="\
 \[\`__user_host_colorized\`\]\
 \[\e[00m\]: \
 \[\e[93m\]\w\
-\[\e[36m\]\`__git_ps1\`\
+\[\e[36m\]\`which __git_ps1 1>/dev/null 2>&1 && __git_ps1\`\
 \[\e[0m\]\n\$ "
 
 if which code 1>/dev/null 2>&1
