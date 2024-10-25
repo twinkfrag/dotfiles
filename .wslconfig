@@ -1,0 +1,11 @@
+[_wsl2]
+_networkingMode=bridged
+_vmSwitch=Wi-Fi
+_dhcp=true
+_macAddress="00:15:5d:11:55:66"
+
+[wsl2]
+networkingMode=mirrored
+dnsTunneling=true
+firewall=true
+autoProxy=true

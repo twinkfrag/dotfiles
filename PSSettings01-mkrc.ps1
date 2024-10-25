@@ -7,7 +7,8 @@ $linkFilenames = @(
     ".gitignore", ".git.gitconfig", 
     ".latexmkrc", 
     ".bashrc", ".bash.bashrc", ".bash_history",
-    ".editorconfig"
+    ".editorconfig",
+    ".wslconfig"
 )
 foreach ($name in $linkFilenames)
 {
@@ -29,6 +30,6 @@ ssh-add "$env:OneDriveConsumer\Projects\.ssh\id_ed25519"
 # cat <<EOF | sudo tee -a /etc/pam.d/sudo
 # auth sufficient pam_ssh_agent_auth.so file=~/.ssh/authorized_keys debug
 # EOF
-# (2) gitコマンドを `git -A` (agentの転送)に変更 or `ForwardAgent yes`
+# (2) sshコマンドを `ssh -A` (agentの転送)に変更 or `ForwardAgent yes`
 
 Pause
