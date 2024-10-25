@@ -1,3 +1,6 @@
+# return if non-interactive shell
+if [ -z "$PS1" ]; then return; fi
+
 # -------- from ubuntu default --------
 
 # check the window size after each command and, if necessary,

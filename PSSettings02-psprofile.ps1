@@ -1,6 +1,6 @@
 using namespace System.IO;
 
-Set-ExecutionPolicy RemoteSigned
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 $dir = New-Object DirectoryInfo(Split-Path -Parent $MyInvocation.MyCommand.Definition)
 
